@@ -1,37 +1,24 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Main {
 
     public static void main(String[] args){
 
 
-        String name ="Alice";
-        int gallonsUsed = 8000;
-        int customerType=1; //1 is single fam 2 is duplex
-        double bill=0.0;
+        System.out.println("Hello world");
 
-        if (customerType == 1) {
-            if (gallonsUsed <= 7000) {
-                bill = 13.21 + gallonsUsed * (2.04 / 1000.0);
-            } else if (gallonsUsed <= 13000) {
-                bill = 13.21 + 7000 * (2.04 / 1000.0)
-                        + (gallonsUsed - 7000) * (2.35 / 1000.0);
-            } else {
-                bill = 13.21 + 7000 * (2.04 / 1000.0)
-                        + 6000 * (2.35 / 1000.0)
-                        + (gallonsUsed - 13000) * (2.70 / 1000.0);
-            }
-        } else {
-            if (gallonsUsed <= 7000) {
-                bill = 15.51 + gallonsUsed * (1.97 / 1000.0);
-            } else if (gallonsUsed <= 13000) {
-                bill = 15.51 + 9000 * (1.97 / 1000.0)
-                        + (gallonsUsed - 9000) * (2.26 / 1000.0);
-            } else {
-                bill = 15.51 + 9000 * (1.97 / 1000.0)
-                        + 4000 * (2.26 / 1000.0)
-                        + (gallonsUsed - 13000) * (2.60 / 1000.0);
-            }
-        }
-        System.out.println("The bill is "+ bill);
+        Customer charleeCustomer = new Customer();
+        charleeCustomer.name ="Charlee";
+        charleeCustomer.customerType = 1;
+        charleeCustomer.gallonsUsed = 8000;
+        charleeCustomer.calculateBill();
+        System.out.println(charleeCustomer.name);
+
+        Customer quinnCustomer = new Customer();
+        quinnCustomer.gallonsUsed=4;
+        System.out.println(quinnCustomer.gallonsUsed);
 
     }
 }
