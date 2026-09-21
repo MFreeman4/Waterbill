@@ -6,19 +6,18 @@ public class Main {
 
     public static void main(String[] args){
 
+    Customer c = new Customer();
 
-        System.out.println("Hello world");
-
-        Customer charleeCustomer = new Customer();
-        charleeCustomer.name ="Charlee";
-        charleeCustomer.customerType = 1;
-        charleeCustomer.gallonsUsed = 8000;
-        charleeCustomer.calculateBill();
+    c.setName("");
+    c.customerInput();
+    c.calculateBill();
+    c.printBill();
 
 
-        Customer quinnCustomer = new Customer();
-        quinnCustomer.gallonsUsed=4;
-        System.out.println(quinnCustomer.gallonsUsed);
+
+
+
+
 
     }
 }
