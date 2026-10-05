@@ -22,7 +22,7 @@ public class Customer {
     private int gallonsUsed;
     private int customerType; //1 is single fam 2 is duplex
     private double bill;
-    //getter
+
 
     public Customer (){
 
@@ -32,7 +32,7 @@ public class Customer {
         setGallonsUsed(gallonsUsed);
         setCustomerType(customerType);
     }
-
+//getters-------------------------------------------------
     public int getGallonsUsed(){
         return gallonsUsed;
     }
